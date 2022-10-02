@@ -2,7 +2,7 @@
 use App\Train;
 use Illuminate\Database\Seeder;
 
-class TrainSeeder extends Seeder
+class TrainTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,7 @@ class TrainSeeder extends Seeder
      */
     public function run()
     {
-        //creo un ciclo per inserire i dati che verrano generati da facker
-          $faker = \Faker\Factory::create('it_IT');
+        $faker = \Faker\Factory::create('it_IT');
         for($i=0; $i<50; $i++) {
             $newTrain = new Train();
             $newTrain->Company = $faker->word();
@@ -26,7 +25,6 @@ class TrainSeeder extends Seeder
             $newTrain->Cancelled =$faker->boolean();
             $newTrain->save();
 
-             
-        } 
     }
+}
 }
