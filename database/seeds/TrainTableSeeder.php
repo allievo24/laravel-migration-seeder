@@ -17,8 +17,8 @@ class TrainTableSeeder extends Seeder
             $newTrain->Company = $faker->word();
             $newTrain->Depature_station = $faker->city();
             $newTrain->Arrival_station = $faker->city();
-            $newTrain->Depature_Time = $faker->dateTimeBeetween('-3 days','+3 days');
-            $newTrain->Arrival_Time = $faker->dateTimeBeetween('now','+3 days');
+            $newTrain->Depature_Time = $faker->dateTimeBetween('-3 days','+3 days');
+            $newTrain->Arrival_Time = $faker->dateTimeBetween('now','+3 days');
             $newTrain->Train_Code = $faker->bothify('???-###');
             $newTrain->Number_Carriages = $faker->randomDigitNotNull();
             $newTrain->In_time = $faker->boolean();
